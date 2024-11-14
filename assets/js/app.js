@@ -216,7 +216,7 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
     // });
 
     /*--------------------------------------------------------------
-    infinix COUNTER JS INIT
+    Infinix COUNTER JS INIT
     --------------------------------------------------------------*/
     var infinix_counter = $('#infinix-counter');
     if (infinix_counter.is_exist()) {
