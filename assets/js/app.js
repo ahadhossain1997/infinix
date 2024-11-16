@@ -197,23 +197,45 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
       });
     }
 
-    // var $titleTab = $('.title_tab');
-    // $('.Accordion_item:eq(0)').find('.title_tab').addClass('active').next().stop().slideDown(300);
-    // $titleTab.on('click', function(e) {
-    // e.preventDefault();
-    //   if ( $(this).hasClass('active') ) {
-    //     $(this).removeClass('active');
-    //     $(this).next().stop().slideUp(500);
-    //     $(this).next().find('p').removeClass('show');
-    //   } else {
-    //     $(this).addClass('active');
-    //     $(this).next().stop().slideDown(500);
-    //     $(this).parent().siblings().children('.title_tab').removeClass('active');
-    //     $(this).parent().siblings().children('.inner_content').slideUp(500);
-    //     $(this).parent().siblings().children('.inner_content').find('p').removeClass('show');
-    //     $(this).next().find('p').addClass('show');
-    //   }
-    // });
+    /*--------------------------------------------------------------
+    INFINIX  TESTIMONIAL SLIDER JS INIT
+    --------------------------------------------------------------*/
+    var t_slider = $('.infinix-testimonial-slider');
+    if (t_slider.is_exist()) {
+      t_slider.slick({
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        arrows: false,
+        autoplay: false,
+        dots: true,
+        centerMode: true,
+        centerPadding: '200px',
+        lazyLoad: 'progressive',
+        responsive: [{
+          breakpoint: 1349,
+          settings: {
+            slidesToShow: 2
+          }
+        }, {
+          breakpoint: 991,
+          settings: {
+            slidesToShow: 1
+          }
+        }, {
+          breakpoint: 767,
+          settings: {
+            slidesToShow: 1,
+            centerPadding: '100px'
+          }
+        }, {
+          breakpoint: 575,
+          settings: {
+            slidesToShow: 1,
+            centerPadding: '0px'
+          }
+        }]
+      });
+    }
 
     /*--------------------------------------------------------------
     Infinix COUNTER JS INIT
