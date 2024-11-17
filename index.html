@@ -414,9 +414,11 @@
         <h5>[Welcome to Infinix]</h5>
         <h1 class="hero-title">Grow & manage your business</h1>
         <p class="text">Welcome to Infinix, a leading consulting firm with a strong history of excellence and innovation. With a passion for precision, efficiency and commitment to quality, we strive for outstanding service.</p>
-        <a href="service.html" class="infinix-default-btn pill infinix-hero-btn">View Our Services
-          <img src="assets/images/hero/right-arrow-white.svg" alt="">
-        </a>
+        <div class="mt-50">
+          <a href="service.html" class="infinix-default-btn pill infinix-hero-btn">View Our Services
+            <img src="assets/images/hero/right-arrow-white.svg" alt="">
+          </a>
+        </div>
       </div>
     </div>
   </div>
@@ -429,7 +431,8 @@
           <div class="infinix-about-thumb">
             <img src="assets/images/about-us/about-01.png" alt="">
             <div class="infinix-about-card">
-              <img src="assets/images/about-us/card1.svg" alt="">
+              <h2 class="infinix-counter-data" aria-label="12+">12+</h2>
+              <h5>Years of experience</h5>
             </div>
           </div>
         </div>
@@ -462,25 +465,12 @@
           </div>
         </div>
       </div>
-      <div id="infinix-counter"></div>
-      <div class="infinix-counter-column">
-        <div class="infinix-counter-data">
-          <div class="infinix-counter-number"><span data-percentage="32" class="infinix-counter"></span>K+</div>
-          <p>Project Completed</p>
-        </div>
-        <div class="infinix-counter-data">
-          <div class="infinix-counter-number"><span data-percentage="40" class="infinix-counter"></span>M</div>
-          <p>Satisfied Clients</p>
-        </div>
-        <div class="infinix-counter-data">
-          <div class="infinix-counter-number"><span data-percentage="75" class="infinix-counter"></span>%</div>
-          <p>Sales Increase</p>
-        </div>
-        <div class="infinix-counter-data">
-          <div class="infinix-counter-number"><span data-percentage="24" class="infinix-counter"></span>/7</div>
-          <p>Support Center</p>
-        </div>
-      </div>
+      <section class="infinix-counter-wrap">
+        <h2 class="infinix-counter-data" aria-label="322K+">32K+</h2>
+        <h2 class="infinix-counter-data" aria-label="40M">40M</h2>
+        <h2 class="infinix-counter-data" aria-label="75%">75%</h2>
+        <h2 class="infinix-counter-data" aria-label="24/7">24/7</h2>
+      </section>
     </div>
   </div>
   <!-- end about -->
@@ -491,7 +481,7 @@
         <div class="row">
           <div class="col-xl-7 col-lg-8">
             <h6>[Our Services]</h6>
-            <h2 class="title pb-0">Providing our services worldwide</h2>
+            <h2 class="title pb-0 ml-20">Providing our services worldwide</h2>
           </div>
           <div class="col-xl-5 col-lg-4 d-flex align-items-center justify-content-end">
             <div class="infinix-title-btn">
@@ -597,7 +587,7 @@
           <div class="infinix-video-thumb">
             <img src="assets/images/v1/thumb-03.png" alt="">
             <a class="infinix-popup-video video-init" href="https://www.youtube.com/watch?v=zE_WFiHnSlY">
-              <img src="assets/images/v1/play-btn.svg" alt="">
+              <img src="assets/images/v1/play-btn1.svg" alt="">
               <div class="waves wave-1"></div>
               <div class="waves wave-2"></div>
               <div class="waves wave-3"></div>
@@ -637,7 +627,6 @@
             </div>
           </div>
         </div>
-
       </div>
     </div>
   </div>
@@ -748,7 +737,7 @@
   </div>
   <!-- end testimonial -->
 
-  <div class="infinix-padding-section">
+  <div class="infinix-padding-section4">
     <div class="container">
       <div class="infinix-section-title center">
         <h6>[Our Team Members]</h6>
@@ -762,7 +751,9 @@
               <img src="assets/images/team/team1.png" alt="">
             </div>
             <div class="infinix-team-content">
-              <h5>James Bennett</h5>
+              <a href="single-team.html">
+                <h5>James Bennett</h5>
+              </a>
               <p>Founder & CEO</p>
               <div class="infinix-team-social">
                 <ul>
@@ -805,7 +796,9 @@
               <img src="assets/images/team/team2.png" alt="">
             </div>
             <div class="infinix-team-content">
-              <h5>Henry Collins</h5>
+              <a href="single-team.html">
+                <h5>Henry Collins</h5>
+              </a>
               <p>Senior Consultant</p>
               <div class="infinix-team-social">
                 <ul>
@@ -848,7 +841,9 @@
               <img src="assets/images/team/team3.png" alt="">
             </div>
             <div class="infinix-team-content">
-              <h5>Oliver Wilson</h5>
+              <a href="single-team.html">
+                <h5>Oliver Wilson</h5>
+              </a>
               <p>Finance Consultant</p>
               <div class="infinix-team-social">
                 <ul>
@@ -891,7 +886,9 @@
               <img src="assets/images/team/team4.png" alt="">
             </div>
             <div class="infinix-team-content">
-              <h5>Thomas Graham</h5>
+              <a href="single-team.html">
+                <h5>Thomas Graham</h5>
+              </a>
               <p>Management Officer</p>
               <div class="infinix-team-social">
                 <ul>
@@ -1057,6 +1054,14 @@
       </div>
     </div>
   </div>
+  <!-- add counter -->
+
+
+
+
+
+
+
 
   <!-- Footer  -->
 
@@ -1111,38 +1116,19 @@
               </div>
               <ul>
                 <li>
-                  <a href="about-us.html">
-                    <svg width="9" height="14" viewBox="0 0 9 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M7.6875 6.3125C8.09375 6.6875 8.09375 7.34375 7.6875 7.71875L2.6875 12.7188C2.3125 13.125 1.65625 13.125 1.28125 12.7188C0.875 12.3438 0.875 11.6875 1.28125 11.3125L5.5625 7L1.28125 2.71875C0.875 2.34375 0.875 1.6875 1.28125 1.3125C1.65625 0.90625 2.3125 0.90625 2.6875 1.3125L7.6875 6.3125Z" fill="white" />
-                    </svg>Business Strategy
-                  </a>
+                  <a href="about-us.html">Business Strategy</a>
                 </li>
                 <li>
-                  <a href="service.html">
-                    <svg width="9" height="14" viewBox="0 0 9 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M7.6875 6.3125C8.09375 6.6875 8.09375 7.34375 7.6875 7.71875L2.6875 12.7188C2.3125 13.125 1.65625 13.125 1.28125 12.7188C0.875 12.3438 0.875 11.6875 1.28125 11.3125L5.5625 7L1.28125 2.71875C0.875 2.34375 0.875 1.6875 1.28125 1.3125C1.65625 0.90625 2.3125 0.90625 2.6875 1.3125L7.6875 6.3125Z" fill="white" />
-                    </svg>Customer Experience
-                  </a>
+                  <a href="service.html">Customer Experience</a>
                 </li>
                 <li>
-                  <a href="portfolio.html">
-                    <svg width="9" height="14" viewBox="0 0 9 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M7.6875 6.3125C8.09375 6.6875 8.09375 7.34375 7.6875 7.71875L2.6875 12.7188C2.3125 13.125 1.65625 13.125 1.28125 12.7188C0.875 12.3438 0.875 11.6875 1.28125 11.3125L5.5625 7L1.28125 2.71875C0.875 2.34375 0.875 1.6875 1.28125 1.3125C1.65625 0.90625 2.3125 0.90625 2.6875 1.3125L7.6875 6.3125Z" fill="white" />
-                    </svg>Financial Advices
-                  </a>
+                  <a href="portfolio.html">Financial Advices</a>
                 </li>
                 <li>
-                  <a href="team.html">
-                    <svg width="9" height="14" viewBox="0 0 9 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M7.6875 6.3125C8.09375 6.6875 8.09375 7.34375 7.6875 7.71875L2.6875 12.7188C2.3125 13.125 1.65625 13.125 1.28125 12.7188C0.875 12.3438 0.875 11.6875 1.28125 11.3125L5.5625 7L1.28125 2.71875C0.875 2.34375 0.875 1.6875 1.28125 1.3125C1.65625 0.90625 2.3125 0.90625 2.6875 1.3125L7.6875 6.3125Z" fill="white" />
-                    </svg>Business Planning
+                  <a href="team.html">Business Planning</a>
                 </li>
                 <li>
-                  <a href="blog.html">
-                    <svg width="9" height="14" viewBox="0 0 9 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M7.6875 6.3125C8.09375 6.6875 8.09375 7.34375 7.6875 7.71875L2.6875 12.7188C2.3125 13.125 1.65625 13.125 1.28125 12.7188C0.875 12.3438 0.875 11.6875 1.28125 11.3125L5.5625 7L1.28125 2.71875C0.875 2.34375 0.875 1.6875 1.28125 1.3125C1.65625 0.90625 2.3125 0.90625 2.6875 1.3125L7.6875 6.3125Z" fill="white" />
-                    </svg>Manage Investment
-                  </a>
+                  <a href="blog.html">Manage Investment</a>
                 </li>
               </ul>
             </div>

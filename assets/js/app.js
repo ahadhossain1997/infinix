@@ -4,6 +4,13 @@ function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == 
 function _defineProperty(obj, key, value) { key = _toPropertyKey(key); if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 function _toPropertyKey(t) { var i = _toPrimitive(t, "string"); return "symbol" == _typeof(i) ? i : String(i); }
 function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e = t[Symbol.toPrimitive]; if (void 0 !== e) { var i = e.call(t, r || "default"); if ("object" != _typeof(i)) return i; throw new TypeError("@@toPrimitive must return a primitive value."); } return ("string" === r ? String : Number)(t); }
+function _createForOfIteratorHelper(o, allowArrayLike) { var it = typeof Symbol !== "undefined" && o[Symbol.iterator] || o["@@iterator"]; if (!it) { if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = it.call(o); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it["return"] != null) it["return"](); } finally { if (didErr) throw err; } } }; }
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && iter[Symbol.iterator] != null || iter["@@iterator"] != null) return Array.from(iter); }
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i]; return arr2; }
 (function ($) {
   "use strict";
 
@@ -104,86 +111,19 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
       }, duration);
       return false;
     });
-
-    /*----------- Custom Animaiton For Slider ----------*/
-
-    // $('[data-ani-duration]').each(function () {
-    //   var durationTime = $(this).data('ani-duration');
-    //     $(this).css('animation-duration', durationTime);
-    // });
-
-    // $('[data-ani-delay]').each(function () {
-    //     var delayTime = $(this).data('ani-delay');
-    //     $(this).css('animation-delay', delayTime);
-    // });
-
-    // $('[data-ani]').each(function () {
-    //     var animaionName = $(this).data('ani');
-    //     $(this).addClass(animaionName);
-    //     $('.slick-slide [data-ani]').addClass('slider-animated');
-    // });
-
-    // $('.global-carousel').on('afterChange', function (event, slick, currentSlide, nextSlide) {
-    //   $(slick.$slides).find('[data-ani]').removeClass('slider-animated');
-    //   $(slick.$slides[currentSlide]).find('[data-ani]').addClass('slider-animated');
-    // });
-
-    /*--------------------------------------------------------------
-    infinix BRAND SLIDER INIT
-    --------------------------------------------------------------*/
-    var brand_slider = $('.infinix-brand-slider');
-    if (brand_slider.is_exist()) {
-      brand_slider.slick(_defineProperty(_defineProperty(_defineProperty(_defineProperty(_defineProperty(_defineProperty(_defineProperty(_defineProperty({
-        slidesToShow: 5,
+    var hero_slider = $('.infinix-hero-slider-init');
+    if (hero_slider.is_exist()) {
+      hero_slider.slick({
+        slidesToShow: 1,
         slidesToScroll: 1,
         autoplay: false,
-        arrows: true
-      }, "slidesToScroll", 1), "infinite", true), "speed", 500), "centerMode", true), "lazyLoad", 'progressive'), "prevArrow", '<button class="slide-arrow infinix-brand-next"></button>'), "nextArrow", '<button class="slide-arrow infinix-brand-prev"></button>'), "responsive", [{
-        breakpoint: 1399,
-        settings: {
-          slidesToShow: 4
-        }
-      }, {
-        breakpoint: 991,
-        settings: {
-          slidesToShow: 3
-        }
-      }, {
-        breakpoint: 767,
-        settings: {
-          slidesToShow: 2
-        }
-      }, {
-        breakpoint: 575,
-        settings: {
-          slidesToShow: 1
-        }
-      }]));
-    }
-    var brand_slider = $('.infinix-brand-slider2');
-    if (brand_slider.is_exist()) {
-      brand_slider.slick({
-        slidesToShow: 5,
-        slidesToScroll: 1,
-        autoplay: true,
-        autoplaySpeed: 0,
-        speed: 4000,
-        arrows: false,
-        centerMode: true,
-        pauseOnHover: false,
-        cssEase: 'linear',
-        responsive: [{
-          breakpoint: 1199,
-          settings: {
-            slidesToShow: 3
-          }
-        }, {
-          breakpoint: 767,
-          settings: {
-            slidesToShow: 2
-          }
-        }]
-      });
+        arrows: true,
+        infinite: true,
+        speed: 1000,
+        lazyLoad: 'progressive',
+        prevArrow: '<button class="slide-arrow infinix-hero-next"></button>',
+        nextArrow: '<button class="slide-arrow infinix-hero-prev"></button>'
+      }).slickAnimation();
     }
 
     /*--------------------------------------------------------------
@@ -196,6 +136,77 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
         mainClass: 'mfp-fade'
       });
     }
+    /*--------------------------------------------------------------
+    INFINIX COUNTER JS INIT
+    --------------------------------------------------------------*/
+
+    var stats = document.querySelectorAll(".infinix-counter-data");
+    stats.forEach(function (stat) {
+      // pattern used to seperate input number from html into an array of numbers and non numbers. EX $65.3M -> ["$65.3M", "$", "65", ".", "3", "M"]
+      var patt = /(\D+)?(\d+)(\D+)?(\d+)?(\D+)?/;
+      var time = 1000;
+      var result = _toConsumableArray(patt.exec(stat.textContent));
+      var fresh = true;
+      var ticks;
+
+      // Remove first full match from result array (we dont need the full match, just the individual match groups).
+      result.shift();
+      // Remove undefined values from result array where they didnt have a match in one of the optional regex groups
+      result = result.filter(function (res) {
+        return res != null;
+      });
+      while (stat.firstChild) {
+        stat.removeChild(stat.firstChild);
+      }
+      var _iterator = _createForOfIteratorHelper(result),
+        _step;
+      try {
+        for (_iterator.s(); !(_step = _iterator.n()).done;) {
+          var res = _step.value;
+          if (isNaN(res)) {
+            stat.insertAdjacentHTML("beforeend", "<span>".concat(res, "</span>"));
+          } else {
+            for (var i = 0; i < res.length; i++) {
+              stat.insertAdjacentHTML("beforeend", "<span data-value=\"".concat(res[i], "\">\n\t\t\t\t\t\t<span>&ndash;</span>\n\t\t\t\t\t\t").concat(Array(parseInt(res[i]) + 1).join(0).split(0).map(function (x, j) {
+                return "\n\t\t\t\t\t\t\t<span>".concat(j, "</span>\n\t\t\t\t\t\t");
+              }).join(""), "\n\t\t\t\t\t</span>"));
+            }
+          }
+        }
+      } catch (err) {
+        _iterator.e(err);
+      } finally {
+        _iterator.f();
+      }
+      ticks = _toConsumableArray(stat.querySelectorAll("span[data-value]"));
+      var activate = function activate() {
+        var top = stat.getBoundingClientRect().top;
+        var offset = window.innerHeight * 0.8;
+        setTimeout(function () {
+          fresh = false;
+        }, time);
+        if (top < offset) {
+          setTimeout(function () {
+            var _iterator2 = _createForOfIteratorHelper(ticks),
+              _step2;
+            try {
+              for (_iterator2.s(); !(_step2 = _iterator2.n()).done;) {
+                var tick = _step2.value;
+                var dist = parseInt(tick.getAttribute("data-value")) + 1;
+                tick.style.transform = "translateY(-".concat(dist * 100, "%)");
+              }
+            } catch (err) {
+              _iterator2.e(err);
+            } finally {
+              _iterator2.f();
+            }
+          }, fresh ? time : 0);
+          window.removeEventListener("scroll", activate);
+        }
+      };
+      window.addEventListener("scroll", activate);
+      activate();
+    });
 
     /*--------------------------------------------------------------
     INFINIX  TESTIMONIAL SLIDER JS INIT
@@ -234,38 +245,6 @@ function _toPrimitive(t, r) { if ("object" != _typeof(t) || !t) return t; var e 
             centerPadding: '0px'
           }
         }]
-      });
-    }
-
-    /*--------------------------------------------------------------
-    Infinix COUNTER JS INIT
-    --------------------------------------------------------------*/
-    var infinix_counter = $('#infinix-counter');
-    if (infinix_counter.is_exist()) {
-      var a = 0;
-      $(window).scroll(function () {
-        var oTop = $(infinix_counter).offset().top - window.innerHeight;
-        if (a == 0 && $(window).scrollTop() > oTop) {
-          $('.infinix-counter').each(function () {
-            var $this = $(this),
-              countTo = $this.attr('data-percentage');
-            $({
-              countNum: $this.text()
-            }).animate({
-              countNum: countTo
-            }, {
-              duration: 4000,
-              easing: 'swing',
-              step: function step() {
-                $this.text(Math.floor(this.countNum));
-              },
-              complete: function complete() {
-                $this.text(this.countNum);
-              }
-            });
-          });
-          a = 1;
-        }
       });
     }
 
