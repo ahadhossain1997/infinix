@@ -27,7 +27,7 @@
 --accent-bg3: #0256FE;
 --light-color: #F7F7F7;
 --light-color2: #2D374A;
---light-color3: #F9F9F9;
+--light-color3: #09152B;
 --light-color4: #D9D9D9;
 --light-color5: #838588;
 --dark-color1: #01194B;
@@ -2920,6 +2920,12 @@ a.white-color {
     display: flex;
   }
 }
+.infinix-list-icon-wrap.wrap3 {
+  margin-bottom: 24px;
+}
+.infinix-list-icon-wrap.wrap3:last-child {
+  margin-bottom: 0;
+}
 .infinix-list-icon-icon2 {
   flex-shrink: 0;
 }
@@ -2951,8 +2957,10 @@ a.white-color {
     display: block;
   }
 }
-.infinix-skill-wrap {
-  width: 100%;
+@media (max-width: 991px) {
+  .infinix-skill-wrap {
+    margin-top: 40px;
+  }
 }
 .infinix-skill-wrap h4 {
   margin-bottom: 20px;
@@ -2981,6 +2989,9 @@ a.white-color {
 .infinix-skill-title h5 {
   margin-bottom: 15px;
 }
+.infinix-skill-title.title2 h5 {
+  color: var(--white-color);
+}
 .infinix-skill-line {
   position: relative;
   height: 12px;
@@ -2996,10 +3007,10 @@ a.white-color {
   margin-bottom: 0 !important;
 }
 .infinix-skill-bar {
-  margin: 0;
+  margin: -1px 0px 0 -2px;
   height: 11px;
   position: absolute;
-  border-radius: 50px;
+  border-radius: 30px;
   transform-origin: left;
   background: var(--accent-color);
   animation: animate 1s 1s cubic-bezier(1, 0, 0.5, 1) forwards;
@@ -3007,7 +3018,7 @@ a.white-color {
 .infinix-skill-bar.bar2 {
   border-radius: 5px;
   height: 20px;
-  margin: 0;
+  margin: 0 0px 0 -2px;
 }
 .infinix-skill-bar.bar2::after {
   position: absolute;
@@ -3039,6 +3050,9 @@ a.white-color {
   padding: 1px 8px;
   border-radius: 3px;
 }
+.infinix-skill-bar.extra-bar::after {
+  color: var(--white-color);
+}
 .infinix-skill-line2 {
   position: relative;
   height: 12px;
@@ -3054,10 +3068,10 @@ a.white-color {
   margin-bottom: 0 !important;
 }
 .infinix-skill-bar2 {
-  margin: 0;
+  margin: 0 0px 0 -2px;
   height: 10px;
   position: absolute;
-  border-radius: 50px;
+  border-radius: 53px;
   transform-origin: left;
   background: var(--accent-bg);
   animation: animate 1s 1s cubic-bezier(1, 0, 0.5, 1) forwards;
@@ -3072,6 +3086,9 @@ a.white-color {
   padding: 1px 8px;
   border-radius: 6px;
   color: var(--heading-color);
+}
+.infinix-skill-bar2.extra-bar::after {
+  color: var(--white-color);
 }
 
 .bar-one {
@@ -3146,6 +3163,19 @@ a.white-color {
   transform: translate(-50%, -50%);
 }
 
+.infinix-video-content a {
+  position: relative;
+  z-index: 0;
+}
+.infinix-video-content .video-title {
+  padding-bottom: 20px;
+  color: var(--white-color);
+}
+.infinix-video-content .video-text {
+  color: var(--white-color);
+  margin-bottom: 0;
+}
+
 @keyframes animName {
   0% {
     transform: rotate(0deg);
@@ -3188,6 +3218,14 @@ a.white-color {
 .waves.wave-3 {
   -webkit-animation-delay: 2s;
   animation-delay: 2s;
+}
+.waves.waves2 {
+  top: -93px;
+}
+@media (max-width: 991px) {
+  .waves.waves2 {
+    top: -70px;
+  }
 }
 
 @keyframes waves {
@@ -3249,15 +3287,6 @@ a.white-color {
   .infinix-content-thumb img {
     border-radius: 10px;
   }
-}
-
-.video-title {
-  padding-bottom: 20px;
-  color: var(--white-color);
-}
-
-.video-text {
-  color: var(--white-color);
 }
 
 .infinix-t-wrap {
@@ -3593,6 +3622,38 @@ a.white-color {
   transform: rotate(45deg);
 }
 
+.infinix-pricing-wrap {
+  padding: 30px;
+  border-radius: 10px;
+  transition: all 0.4s;
+  margin-bottom: 24px;
+  background-color: var(--white-bg);
+}
+.infinix-pricing-wrap:hover {
+  box-shadow: 0px 4px 80px 0px rgba(0, 0, 0, 0.0784313725);
+}
+.infinix-pricing-header {
+  padding-bottom: 24px;
+}
+.infinix-pricing-price {
+  display: flex;
+  align-items: flex-end;
+  gap: 15px;
+}
+.infinix-pricing-price span {
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 48px;
+  letter-spacing: -1px;
+  color: rgba(0, 26, 61, 0.2);
+  text-decoration-line: line-through;
+}
+.infinix-pricing-text {
+  padding: 30px 0;
+  border-bottom: 1px solid rgba(0, 26, 61, 0.1019607843);
+  margin-bottom: 30px;
+}
+
 .infinix-team-wrap {
   border-radius: 10px;
   transition: all 0.4s;
@@ -3629,7 +3690,7 @@ a.white-color {
   border-radius: 0 0 8px 8px;
   bottom: 0;
   left: 0;
-  width: 306px;
+  width: 100%;
   height: 110px;
 }
 .infinix-team-content h5 {
@@ -3637,6 +3698,58 @@ a.white-color {
 }
 .infinix-team-content p {
   margin-bottom: 0;
+}
+
+.infinix-team-slider .slick-slide {
+  margin: 0 12px;
+}
+
+.infinix-team-slider .slick-dots button {
+  display: block;
+  padding: 0;
+  border: none;
+  text-indent: -9999px;
+  transition: 0.3s;
+  width: 10px;
+  height: 10px;
+  background: rgba(0, 26, 61, 0.1019607843);
+  transition: all 0.4s;
+  border-radius: 100px;
+}
+
+.infinix-team-slider ul.slick-dots {
+  bottom: -80px;
+  left: 50%;
+  position: absolute;
+  display: flex;
+  gap: 15px;
+  transform: translate(-50%, -50%);
+}
+@media (max-width: 1199px) {
+  .infinix-team-slider ul.slick-dots {
+    bottom: -70px;
+  }
+}
+@media (max-width: 767px) {
+  .infinix-team-slider ul.slick-dots {
+    display: none !important;
+  }
+}
+
+.infinix-team-slider .slick-dots li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.infinix-team-slider .slick-dots li.slick-active {
+  width: 23px;
+  height: 23px;
+  border-radius: 100px;
+  border: 1px solid var(--accent-color);
+}
+.infinix-team-slider .slick-dots li.slick-active button {
+  background-color: var(--accent-color);
 }
 
 .infinix-social-wrap ul li {
@@ -3888,6 +4001,10 @@ a.white-color {
   color: var(--heading-color);
 }
 
+.infinix-brand-section {
+  padding: 60px 0;
+}
+
 .infinix-service-card {
   position: absolute;
   bottom: -50px;
@@ -3962,6 +4079,25 @@ a.white-color {
 
 .service-btn {
   text-align: center;
+}
+
+@media (max-width: 991px) {
+  .infinix-content-thumb2 {
+    padding-bottom: 40px;
+  }
+}
+@media (max-width: 767px) {
+  .infinix-content-thumb2 {
+    padding-bottom: 30px;
+  }
+}
+.infinix-content-thumb2 img {
+  border-radius: 10px;
+}
+@media (max-width: 991px) {
+  .infinix-content-thumb2 img {
+    width: 100%;
+  }
 }
 
 .infinix-hero-section {
@@ -4819,6 +4955,20 @@ textarea::placeholder { /* Most modern browsers support this now. */
   }
 }
 
+.infinix-padding-section6 {
+  padding: 80px 0 120px;
+}
+@media (max-width: 991px) {
+  .infinix-padding-section6 {
+    padding: 80px 0;
+  }
+}
+@media (max-width: 767px) {
+  .infinix-padding-section6 {
+    padding: 60px 0;
+  }
+}
+
 .infinix-section-title {
   padding-bottom: 60px;
 }
@@ -4847,6 +4997,11 @@ textarea::placeholder { /* Most modern browsers support this now. */
   margin-top: 50px;
 }
 @media (max-width: 991px) {
+  .mt-50 {
+    margin-top: 40px;
+  }
+}
+@media (max-width: 767px) {
   .mt-50 {
     margin-top: 30px;
   }
