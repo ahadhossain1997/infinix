@@ -1,14 +1,14 @@
 /*---------- 03. Mobile Menu Active ----------*/
 $.fn.vsmobilemenu = function (options) {
     var opt = $.extend({
-        menuToggleBtn: ".infinix-menu-toggle",
-        bodyToggleClass: "infinix-body-visible",
-        subMenuClass: "infinix-submenu",
-        subMenuParent: "infinix-item-has-children",
-        subMenuParentToggle: "infinix-active",
-        meanExpandClass: "infinix-mean-expand",
-        appendElement: '<span class="infinix-mean-expand"></span>',
-        subMenuToggleClass: "infinix-open",
+        menuToggleBtn: ".luminix-menu-toggle",
+        bodyToggleClass: "luminix-body-visible",
+        subMenuClass: "luminix-submenu",
+        subMenuParent: "luminix-item-has-children",
+        subMenuParentToggle: "luminix-active",
+        meanExpandClass: "luminix-mean-expand",
+        appendElement: '<span class="luminix-mean-expand"></span>',
+        subMenuToggleClass: "luminix-open",
         toggleSpeed: 400,
       },
       options
@@ -84,4 +84,4 @@ $.fn.vsmobilemenu = function (options) {
     });
   };
 
-  $(".infinix-menu-wrapper").vsmobilemenu();
+  $(".luminix-menu-wrapper").vsmobilemenu();

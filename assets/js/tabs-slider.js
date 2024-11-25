@@ -2,17 +2,17 @@
 	/*Activate default tab contents*/
 	var $magicLine, defaultActive;  
 	
-	defaultActive = $('.infinix-tabs-menu li.active a').attr('href');
+	defaultActive = $('.luminix-tabs-menu li.active a').attr('href');
 	$(defaultActive).show();
 				
-	$('.infinix-tabs-menu').append("<li id='magic-line'></li>");
+	$('.luminix-tabs-menu').append("<li id='magic-line'></li>");
 	$magicLine = $('#magic-line');		    
 	$magicLine.width($('.active').width())
 		// .css('left', $('.active a').position().left)
 		// .data('origLeft', $magicLine.position().left)
 		// .data('origWidth', $magicLine.width());				
 		
-	$('.infinix-tabs-menu li a').click(function(){
+	$('.luminix-tabs-menu li a').click(function(){
 		var $this,tabId,leftVal,$tabContent;
 		$this = $(this);
 		$tabContent = $('.tabContent');
@@ -20,7 +20,7 @@
 		tabId = $this.attr('href');		
 		
 		leftVal = $($tabContent).index($(tabId)) * $tabContent.width() * -1;
-		$('.infinix-tabs-wrapper').stop().animate({left:leftVal});
+		$('.luminix-tabs-wrapper').stop().animate({left:leftVal});
 		
 		$magicLine
 			.data('origLeft',$this.position().left)

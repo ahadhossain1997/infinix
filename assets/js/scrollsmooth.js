@@ -2,12 +2,12 @@
 
 
 // ScrollSmoother.create({
-//   content: ".infinix-smooth-scroll",
+//   content: ".luminix-smooth-scroll",
 //   smooth: 1
 // });
 
 // const body = document.body,
-//   jsScroll = document.getElementsByClassName("infinix-smooth-scroll")[0],
+//   jsScroll = document.getElementsByClassName("luminix-smooth-scroll")[0],
 //   height = jsScroll.getBoundingClientRect().height - 1,
 //   speed = 0.05;
 

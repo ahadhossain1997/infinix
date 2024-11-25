@@ -2,7 +2,7 @@ var Accordion = function(el, multiple) {
   this.el = el || {};
   this.multiple = multiple || false;
 
-  var links = this.el.find('.infinix-faq-header');
+  var links = this.el.find('.luminix-faq-header');
   links.on('click', {
       el: this.el,
       multiple: this.multiple
@@ -18,7 +18,7 @@ Accordion.prototype.dropdown = function(e) {
   $this.parent().toggleClass('open');
 
   if (!e.data.multiple) {
-      $el.find('.infinix-faq-body').not($next).slideUp().parent().removeClass('open');
+      $el.find('.luminix-faq-body').not($next).slideUp().parent().removeClass('open');
   };
 }
-var accordion = new Accordion($('.infinix-faq-wrap1'), false);
+var accordion = new Accordion($('.luminix-faq-wrap1'), false);

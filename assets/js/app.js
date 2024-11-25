@@ -13,21 +13,21 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
   /*--------------------------------------------------------------
    [Table of contents]
   
-  infinix PRELOADER JS INIT
-  infinix HEADER SEARCH JS INIT
-  infinix STICKY MENU JS INIT
-  infinix MENU SIDEBAR JS INIT
-  infinix PROGRES CIRCLE JS INIT
-  infinix BRAND SLIDER INIT
-  infinix MAGNIFIC PUPOP JS INIT
-  infinix COUNTER JS INIT
-  infinix THREE COLUMN SLIDER JS INIT
-  infinix TSTIMONIAL SLIDER INIT
-  infinix SKILLBAR JS INIT
-  infinix TOOGLE BUTTON JS INIT
-  infinix CURRENT YEAR JS INIT
-  infinix AOS ANIMATION JS INIT
-  infinix MAP JS INIT
+  luminix PRELOADER JS INIT
+  luminix HEADER SEARCH JS INIT
+  luminix STICKY MENU JS INIT
+  luminix MENU SIDEBAR JS INIT
+  luminix PROGRES CIRCLE JS INIT
+  luminix BRAND SLIDER INIT
+  luminix MAGNIFIC PUPOP JS INIT
+  luminix COUNTER JS INIT
+  luminix THREE COLUMN SLIDER JS INIT
+  luminix TSTIMONIAL SLIDER INIT
+  luminix SKILLBAR JS INIT
+  luminix TOOGLE BUTTON JS INIT
+  luminix CURRENT YEAR JS INIT
+  luminix AOS ANIMATION JS INIT
+  luminix MAP JS INIT
   -------------------------------------------------------------------*/
 
   /*--------------------------------------------------------------
@@ -39,19 +39,19 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
   };
   $(function () {
     /*--------------------------------------------------------------
-    infinix PRELOADER JS INIT
+    luminix PRELOADER JS INIT
     --------------------------------------------------------------*/
-    $(".infinix-preloader-wrap").fadeOut(500);
+    $(".luminix-preloader-wrap").fadeOut(500);
 
     /*--------------------------------------------------------------
-    infinix HEADER SEARCH JS INIT
+    luminix HEADER SEARCH JS INIT
     ------------------------------------------------------------*/
-    $(".infinix-header-search, .infinix-header-search-close, .search-overlay").click(function () {
-      $(".infinix-header-search-section, .search-overlay").toggleClass("open");
+    $(".luminix-header-search, .luminix-header-search-close, .search-overlay").click(function () {
+      $(".luminix-header-search-section, .search-overlay").toggleClass("open");
     });
 
     /*--------------------------------------------------------------
-    infinix STICKY MENU JS INIT
+    luminix STICKY MENU JS INIT
     --------------------------------------------------------------*/
     $(window).on('scroll', function () {
       if ($(window).scrollTop() > 50) {
@@ -62,18 +62,18 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
     });
 
     /*--------------------------------------------------------------
-    infinix MENU SIDEBAR JS INIT
+    luminix MENU SIDEBAR JS INIT
     --------------------------------------------------------------*/
-    $(".infinix-header-triger").on("click", function (e) {
-      $(".infinix-sidemenu-column, .offcanvas-overlay").addClass("active");
+    $(".luminix-header-triger").on("click", function (e) {
+      $(".luminix-sidemenu-column, .offcanvas-overlay").addClass("active");
       event.preventDefault(e);
     });
-    $(".infinix-sidemenu-close, .offcanvas-overlay").on("click", function () {
-      $(".infinix-sidemenu-column, .offcanvas-overlay").removeClass("active");
+    $(".luminix-sidemenu-close, .offcanvas-overlay").on("click", function () {
+      $(".luminix-sidemenu-column, .offcanvas-overlay").removeClass("active");
     });
 
     /*--------------------------------------------------------------
-    infinix PROGRES CIRCLE JS INIT
+    luminix PROGRES CIRCLE JS INIT
     --------------------------------------------------------------*/
 
     var progressPath = document.querySelector('.progress-wrap path');
@@ -107,7 +107,7 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
       }, duration);
       return false;
     });
-    var hero_slider = $('.infinix-hero-slider-init');
+    var hero_slider = $('.luminix-hero-slider-init');
     if (hero_slider.is_exist()) {
       hero_slider.slick({
         slidesToShow: 1,
@@ -117,13 +117,13 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
         infinite: true,
         speed: 1000,
         lazyLoad: 'progressive',
-        prevArrow: '<button class="slide-arrow infinix-hero-next"></button>',
-        nextArrow: '<button class="slide-arrow infinix-hero-prev"></button>'
+        prevArrow: '<button class="slide-arrow luminix-hero-next"></button>',
+        nextArrow: '<button class="slide-arrow luminix-hero-prev"></button>'
       }).slickAnimation();
     }
 
     /*--------------------------------------------------------------
-    infinix MAGNIFIC PUPOP JS INIT
+    luminix MAGNIFIC PUPOP JS INIT
     --------------------------------------------------------------*/
     var popup_youtube = $('.video-init');
     if (popup_youtube.is_exist()) {
@@ -132,19 +132,19 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
         mainClass: 'mfp-fade'
       });
     }
-    var brand_slider = $('.infinix-brand-slider-wrap');
+    var brand_slider = $('.luminix-brand-slider-wrap');
     if (brand_slider.is_exist()) {
       brand_slider.slick({
         slidesToShow: 7,
         slidesToScroll: 1,
         autoplay: true,
         autoplaySpeed: 0,
-        speed: 4000,
+        speed: 8000,
         arrows: false,
         pauseOnHover: false,
         cssEase: 'linear',
         responsive: [{
-          breakpoint: 1599,
+          breakpoint: 1399,
           settings: {
             slidesToShow: 5
           }
@@ -161,27 +161,17 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
         }, {
           breakpoint: 767,
           settings: {
-            slidesToShow: 3
-          }
-        }, {
-          breakpoint: 700,
-          settings: {
             slidesToShow: 2
-          }
-        }, {
-          breakpoint: 500,
-          settings: {
-            slidesToShow: 1
           }
         }]
       });
     }
 
     /*--------------------------------------------------------------
-    INFINIX COUNTER JS INIT
+    luminix COUNTER JS INIT
     --------------------------------------------------------------*/
 
-    var stats = document.querySelectorAll(".infinix-counter-data");
+    var stats = document.querySelectorAll(".luminix-counter-data");
     stats.forEach(function (stat) {
       // pattern used to seperate input number from html into an array of numbers and non numbers. EX $65.3M -> ["$65.3M", "$", "65", ".", "3", "M"]
       var patt = /(\D+)?(\d+)(\D+)?(\d+)?(\D+)?/;
@@ -250,18 +240,19 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
     });
 
     /*--------------------------------------------------------------
-    INFINIX  TESTIMONIAL SLIDER JS INIT
+    luminix  TESTIMONIAL SLIDER JS INIT
     --------------------------------------------------------------*/
-    var t_slider = $('.infinix-testimonial-slider');
+    var t_slider = $('.luminix-testimonial-slider');
     if (t_slider.is_exist()) {
       t_slider.slick({
         slidesToShow: 3,
         slidesToScroll: 1,
         arrows: false,
-        autoplay: false,
+        autoplay: true,
         dots: true,
         centerMode: true,
-        centerPadding: '200px',
+        speed: 500,
+        centerPadding: '180px',
         lazyLoad: 'progressive',
         responsive: [{
           breakpoint: 1349,
@@ -289,48 +280,44 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
       });
     }
     /*--------------------------------------------------------------
-    INFINIX  TEAM SLIDER JS INIT
+    luminix  TEAM SLIDER JS INIT
     --------------------------------------------------------------*/
 
-    var team_slider = $('.infinix-team-slider');
+    var team_slider = $('.luminix-team-slider');
     if (team_slider.is_exist()) {
       team_slider.slick({
-        slidesToShow: 4,
+        slidesToShow: 6,
         slidesToScroll: 1,
         arrows: false,
-        autoplay: false,
+        autoplay: true,
+        speed: 200,
         dots: true,
-        centerMode: true,
-        centerPadding: '200px',
-        lazyLoad: 'progressive',
         responsive: [{
-          breakpoint: 1349,
+          breakpoint: 1600,
           settings: {
-            slidesToShow: 2
+            slidesToShow: 4
+          }
+        }, {
+          breakpoint: 1399,
+          settings: {
+            slidesToShow: 3
           }
         }, {
           breakpoint: 991,
           settings: {
-            slidesToShow: 1
-          }
-        }, {
-          breakpoint: 767,
-          settings: {
-            slidesToShow: 1,
-            centerPadding: '100px'
+            slidesToShow: 2
           }
         }, {
           breakpoint: 575,
           settings: {
-            slidesToShow: 1,
-            centerPadding: '0px'
+            slidesToShow: 1
           }
         }]
       });
     }
 
     /*--------------------------------------------------------------
-    infinix SKILLBAR JS INIT
+    luminix SKILLBAR JS INIT
     --------------------------------------------------------------*/
 
     (function ($) {
@@ -393,7 +380,7 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
     })(jQuery);
 
     /*--------------------------------------------------------------
-    infinix TOOGLE BUTTON JS INIT
+    luminix TOOGLE BUTTON JS INIT
     --------------------------------------------------------------*/
 
     $(document).ready(function () {
@@ -416,14 +403,14 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
     });
 
     /*--------------------------------------------------------------
-    infinix CURRENT YEAR JS INIT
+    luminix CURRENT YEAR JS INIT
     --------------------------------------------------------------*/
 
     var currentYear = new Date().getFullYear();
     $('#current-year').text(currentYear);
 
     /*--------------------------------------------------------------
-    infinix AOS ANIMATION JS INIT
+    luminix AOS ANIMATION JS INIT
     --------------------------------------------------------------*/
 
     AOS.init({
@@ -436,7 +423,7 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
   $(window).on('load', function () {}); // End window LODE
 
   /*--------------------------------------------------------------
-  infinix MAP JS
+  luminix MAP JS
   ------------------------------------------------------------*/
   var google_map = $('#map');
   if (google_map.is_exist()) {
@@ -548,9 +535,9 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
         position: new google.maps.LatLng(40.6700, -73.9400),
         map: map,
         // icon: 'assets/images/all-img/contact/map.png',
-        title: 'infinix'
+        title: 'luminix'
       });
-      var contentString = '<div id="content">' + '<div id="tpw">' + '<h3>infinix' + '</div>';
+      var contentString = '<div id="content">' + '<div id="tpw">' + '<h3>luminix' + '</div>';
       var infowindow = new google.maps.InfoWindow({
         content: contentString,
         maxWidth: 280
