@@ -2849,6 +2849,91 @@ a.white-color {
 }
 
 /*1.2 components css*/
+.luminix-countdown-wrap {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.luminix-countdown-item {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 110px;
+  font-weight: 700;
+  line-height: 110px;
+  letter-spacing: -2px;
+  color: var(--heading-color);
+  position: relative;
+  width: 250px;
+  height: 250px;
+  border-radius: 150px;
+  border: 2px solid var(--heading-color);
+  position: relative;
+  padding: 55px 50px 73px 50px;
+  text-align: center;
+}
+.luminix-countdown-item h5 {
+  text-align: center;
+}
+
+.luminix-coomig-soon-content {
+  max-width: 870px;
+  text-align: center;
+  margin: 0 auto;
+}
+.luminix-coomig-soon-content .text {
+  max-width: 600px;
+  text-align: center;
+  margin: 0 auto;
+}
+.luminix-logo {
+  text-align: center;
+  padding-bottom: 80px;
+}
+@media (max-width: 767px) {
+  .luminix-logo {
+    padding-bottom: 60px;
+  }
+}
+
+.luminix-term-condition-content {
+  padding-bottom: 30px;
+  padding-left: 100px;
+}
+@media (max-width: 1199px) {
+  .luminix-term-condition-content {
+    padding-left: 80px;
+  }
+}
+@media (max-width: 991px) {
+  .luminix-term-condition-content {
+    padding-left: 0;
+  }
+}
+.luminix-term-condition-content:last-child {
+  padding-bottom: 0;
+}
+.luminix-term-condition-content .title-text {
+  color: var(--dark-color2);
+  margin-bottom: 30px;
+}
+@media (max-width: 991px) {
+  .luminix-term-condition-content .title-text {
+    padding-top: 40px;
+  }
+}
+@media (max-width: 767px) {
+  .luminix-term-condition-content .title-text {
+    padding-top: 30px;
+  }
+}
+.luminix-term-condition-content h3 {
+  padding-bottom: 20px;
+}
+.luminix-term-condition-content p {
+  color: var(--dark-color2);
+  margin: 0;
+}
+
 .luminix-contact-us-thumb {
   position: relative;
   overflow: hidden;
@@ -3162,6 +3247,45 @@ a.white-color {
 }
 .luminix-list-icon-btn path {
   transition: all 0.4s;
+}
+
+.luminix-error-section {
+  padding: 290px 0 120px;
+}
+@media (max-width: 1199px) {
+  .luminix-error-section {
+    padding: 220px 0 120px;
+  }
+}
+@media (max-width: 991px) {
+  .luminix-error-section {
+    padding: 180px 0 80px;
+  }
+}
+@media (max-width: 767px) {
+  .luminix-error-section {
+    padding: 150px 0 60px;
+  }
+}
+.luminix-error-content {
+  max-width: 800px;
+  text-align: center;
+  margin: 0 auto;
+}
+.luminix-error-content .text {
+  font-size: 21px;
+  line-height: 30px;
+  color: var(--heading-color);
+  margin: 0 auto;
+  max-width: 750px;
+}
+.luminix-error-thumb {
+  padding-bottom: 45px;
+}
+@media (max-width: 767px) {
+  .luminix-error-thumb {
+    padding-bottom: 30px;
+  }
 }
 
 .luminix-skill-wraper {
@@ -3963,6 +4087,120 @@ a.white-color {
 }
 .luminix-p-btn:hover img {
   transform: rotate(0);
+}
+.luminix-p-d-thumb {
+  margin-bottom: 24px;
+  overflow: hidden;
+  position: relative;
+  border-radius: 10px;
+}
+.luminix-p-d-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.4s;
+  border-radius: 10px;
+}
+.luminix-p-d-thumb img:hover {
+  transform: scale(1.1);
+}
+.luminix-p-d-thumb3 {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  margin-top: 30px;
+}
+.luminix-p-d-thumb3 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.4s;
+  border-radius: 10px;
+}
+.luminix-p-d-thumb3 img:hover {
+  transform: scale(1.1);
+}
+.luminix-p-d-content {
+  padding-bottom: 30px;
+}
+.luminix-p-d-content h3 {
+  padding-bottom: 20px;
+}
+.luminix-p-d-content p {
+  color: var(--heading-color);
+}
+.luminix-p-d-content ul li {
+  position: relative;
+  padding-left: 20px;
+  color: var(--heading-color);
+  margin-bottom: 5px;
+}
+.luminix-p-d-content ul li:first-child {
+  margin-top: 30px;
+}
+.luminix-p-d-content ul li:last-child {
+  margin-bottom: 0;
+}
+.luminix-p-d-content ul li::before {
+  top: 12px;
+  left: 0;
+  width: 5px;
+  height: 5px;
+  content: "";
+  position: absolute;
+  border-radius: 100px;
+  background-color: var(--heading-color);
+}
+.luminix-p-d-sidebar {
+  border-radius: 10px;
+  padding: 30px;
+  background-color: var(--light-color);
+}
+.luminix-p-d-sidebar .sidebar-title2 {
+  position: relative;
+  padding-bottom: 24px;
+}
+.luminix-p-d-sidebar .sidebar-title2::before {
+  width: 226px;
+  height: 2px;
+  bottom: 20px;
+  left: 0;
+  content: "";
+  position: absolute;
+  background-color: var(--heading-color);
+}
+.luminix-p-d-sidebar ul li {
+  font-size: 21px;
+  line-height: 30px;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  color: var(--light-color3);
+  margin-bottom: 15px;
+}
+.luminix-p-d-sidebar ul li:last-child {
+  margin-bottom: 0;
+}
+.luminix-p-d-sidebar ul li span {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--light-color3);
+  line-height: 30px;
+  margin-right: 5px;
+}
+.luminix-p-d-sidebar ul li a {
+  color: var(--accent-bg);
+}
+.luminix-p-d-sidebar ul li a.link {
+  position: relative;
+}
+.luminix-p-d-sidebar ul li a.link::before {
+  width: 210px;
+  height: 2px;
+  bottom: 0;
+  right: 0;
+  content: "";
+  position: absolute;
+  background-color: var(--accent-bg);
 }
 
 .luminix-portfolio-menu ul li {
@@ -5895,6 +6133,46 @@ button#header-search i {
   height: 50px;
   background-color: var(--white-bg);
 }
+.luminix-subscription-field2 {
+  text-align: center;
+  position: relative;
+  max-width: 500px;
+  margin: 0 auto;
+}
+.luminix-subscription-field2 .sub-btn {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  width: 150px;
+  height: 50px;
+  padding: 14px 30px;
+}
+@media (max-width: 767px) {
+  .luminix-subscription-field2 .sub-btn {
+    position: static;
+    width: 100%;
+    margin-top: 24px;
+  }
+}
+@media (max-width: 767px) and (max-width: 767px) {
+  .luminix-subscription-field2 .sub-btn {
+    margin-top: 15px;
+    justify-content: center;
+  }
+}
+.luminix-subscription-field2 .text {
+  font-size: 14px;
+  color: rgba(0, 26, 61, 0.8);
+}
+.luminix-subscription-field2 input {
+  font-size: 16px;
+  line-height: 1.33em;
+  padding: 13px 24px;
+  border-radius: 50px;
+  margin-bottom: 12px;
+  height: 60px;
+  border: 1px solid rgba(0, 26, 61, 0.1019607843);
+}
 
 .luminix-cta-input-field {
   display: flex;
@@ -6312,7 +6590,7 @@ textarea::placeholder { /* Most modern browsers support this now. */
 #luminix-submit-btn {
   font-size: 16px;
   line-height: 24px;
-  padding: 17px 44px;
+  padding: 17px 40px;
   font-weight: 700;
   font-family: "Inter", sans-serif;
   width: fit-content;
