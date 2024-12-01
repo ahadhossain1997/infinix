@@ -1822,7 +1822,7 @@ header.luminix-header-section {
 }
 
 header.luminix-header-section.sticky-menu {
-  background-color: var(--white-bg) !important;
+  box-shadow: 0px 4px 80px 0px rgba(0, 0, 0, 0.0784313725);
 }
 
 header.luminix-header-three.sticky-menu {
@@ -1843,7 +1843,7 @@ header.luminix-header-section.luminix-header-two.sticky-menu {
 }
 
 .sticky-menu .luminix-header-top {
-  margin-top: -57px;
+  margin-top: -60px;
   transition: all 0.4s;
   opacity: 0;
 }
@@ -1887,7 +1887,7 @@ header.luminix-header-section.luminix-header-two.sticky-menu {
   background: none !important;
 }
 .luminix-header-bottom {
-  padding: 20px 0;
+  padding: 15px 0;
 }
 
 .luminix-header-info-wraper {
@@ -1937,6 +1937,9 @@ header.luminix-header-section.luminix-header-two.sticky-menu {
   font-size: 14px;
   line-height: 20px;
   margin-bottom: 5px;
+}
+.luminix-header-info-content ul li:last-child {
+  margin-bottom: 0;
 }
 .luminix-header-info-content ul li a {
   font-size: 16px;
@@ -2782,6 +2785,11 @@ a.white-color {
   }
 }
 
+@media (max-width: 1399px) {
+  .ml-50 {
+    margin-left: 70px !important;
+  }
+}
 @media (max-width: 991px) {
   .ml-50 {
     margin-left: 50px !important;
@@ -2846,6 +2854,15 @@ a.white-color {
   width: 100%;
   transition: all 0.4s;
   object-fit: cover;
+}
+
+.ml-15 {
+  margin-left: 15px;
+}
+@media (max-width: 1399px) {
+  .ml-15 {
+    margin-left: 0;
+  }
 }
 
 /*1.2 components css*/
@@ -4063,13 +4080,12 @@ a.white-color {
   gap: 24px;
   background-color: #fff;
   border-radius: 10px;
-  width: 297px;
+  padding: 20px 27px;
   position: absolute;
   bottom: 0;
   left: 30px;
   transition: all 0.4s;
   opacity: 0;
-  height: 90px;
   justify-content: center;
 }
 .luminix-p-btn {
@@ -4669,6 +4685,11 @@ img.plasicon {
   right: 20px;
   color: var(--heading-color);
   font-weight: 600;
+  transition: all 0.4s;
+}
+.luminix-blog-frame a:hover {
+  color: var(--white-color);
+  background-color: var(--accent-bg);
 }
 .luminix-blog-content {
   padding: 30px;
@@ -4709,7 +4730,6 @@ img.plasicon {
 .luminix-blog-btn a svg {
   margin-left: 5px;
   transition: all 0.4s;
-  margin-top: -5px;
 }
 .luminix-blog-btn a:hover {
   color: var(--accent-color);
@@ -5390,24 +5410,24 @@ blockquote img {
 
 .luminix-hero-section {
   padding: 130px 0;
-  margin-top: 170px;
+  margin-top: 160px;
   position: relative;
   z-index: 0;
 }
 @media (max-width: 1199px) {
   .luminix-hero-section {
-    margin-top: 100px;
+    margin-top: 90px;
   }
 }
 @media (max-width: 991px) {
   .luminix-hero-section {
-    padding: 80px 0;
+    padding: 100px 0;
   }
 }
 @media (max-width: 767px) {
   .luminix-hero-section {
-    margin-top: 75px;
-    padding: 60px 0;
+    margin-top: 65px;
+    padding: 80px 0;
   }
 }
 .luminix-hero-section::before {
@@ -5422,6 +5442,21 @@ blockquote img {
 .luminix-hero-content {
   position: relative;
   max-width: 880px;
+}
+@media (max-width: 1199px) {
+  .luminix-hero-content {
+    max-width: 750px;
+  }
+}
+@media (max-width: 991px) {
+  .luminix-hero-content {
+    max-width: 550px;
+  }
+}
+@media (max-width: 767px) {
+  .luminix-hero-content {
+    max-width: 430px;
+  }
 }
 .luminix-hero-content h5 {
   color: var(--white-color);
@@ -5555,10 +5590,6 @@ blockquote img {
   border-radius: 100px;
   border: 1px solid var(--white-color);
   background-image: url(../images/hero/left-arrow.svg);
-}
-.luminix-hero-slider-init .luminix-hero-next:hover,
-.luminix-hero-slider-init .luminix-hero-prev:hover {
-  border: 1px solid var(--accent-color);
 }
 @media (max-width: 1599px) {
   .luminix-hero-slider-init .luminix-hero-next,
@@ -6243,7 +6274,7 @@ textarea::placeholder { /* Most modern browsers support this now. */
 
 @media (max-width: 991px) {
   .luminix-contact-thumb {
-    padding-bottom: 30px;
+    padding-top: 40px;
   }
 }
 .luminix-contact-thumb img {
@@ -6590,40 +6621,79 @@ textarea::placeholder { /* Most modern browsers support this now. */
 #luminix-submit-btn {
   font-size: 16px;
   line-height: 24px;
-  padding: 17px 40px;
+  padding: 18px 39px;
   font-weight: 700;
   font-family: "Inter", sans-serif;
-  width: fit-content;
-  position: relative;
-  z-index: 1;
-  border-radius: 6px;
-  white-space: nowrap;
-  text-overflow: ellipsis;
+  user-select: none;
+  -moz-user-select: none;
+  background: var(--accent-bg) none repeat scroll 0 0;
+  color: white;
+  cursor: pointer;
   display: inline-flex;
+  align-items: center;
   text-align: center;
-  -o-transition: all 0.4s ease-in-out;
-  -webkit-transition: all 0.4s ease-in-out;
-  transition: all 0.4s ease-in-out;
+  text-transform: capitalize;
+  touch-action: manipulation;
+  -webkit-transition: all 0.3s ease-out 0s;
+  -moz-transition: all 0.3s ease-out 0s;
+  -ms-transition: all 0.3s ease-out 0s;
+  -o-transition: all 0.3s ease-out 0s;
+  transition: all 0.3s ease-out 0s;
+  vertical-align: middle;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -o-border-radius: 0;
+  -ms-border-radius: 0;
+  border-radius: 0;
+  white-space: nowrap;
   overflow: hidden;
-  color: var(--white-color) !important;
-  background-color: var(--accent-bg);
+  border-radius: 100px;
+  --arrow-hover-move-x: -110%;
+  gap: 10px;
+  z-index: 1;
   position: relative;
-  z-index: 0;
-  overflow: hidden;
-  position: relative;
-  transform-style: preserve-3d;
+  border: none;
 }
-.luminix-default-btn img,
-.luminix-subcribe-btn img,
-#luminix-submit-btn img {
-  padding-left: 10px;
-  padding-top: 3px;
+.luminix-default-btn::before,
+.luminix-subcribe-btn::before,
+#luminix-submit-btn::before {
+  content: "";
+  position: absolute;
+  -webkit-transition-duration: 800ms;
+  transition-duration: 800ms;
+  width: 200%;
+  height: 200%;
+  top: 110%;
+  left: 50%;
+  background: var(--heading-color);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -o-border-radius: 50%;
+  -ms-border-radius: 50%;
+  border-radius: 50%;
+  z-index: -1;
+}
+.luminix-default-btn:hover,
+.luminix-subcribe-btn:hover,
+#luminix-submit-btn:hover {
+  color: var(--white-color);
+}
+.luminix-default-btn:hover::before, .luminix-default-btn:hover .luminix-default-btn:focus-visible::before,
+.luminix-subcribe-btn:hover::before,
+.luminix-subcribe-btn:hover .luminix-default-btn:focus-visible::before,
+#luminix-submit-btn:hover::before,
+#luminix-submit-btn:hover .luminix-default-btn:focus-visible::before {
+  top: -40%;
 }
 .luminix-default-btn svg,
 .luminix-subcribe-btn svg,
 #luminix-submit-btn svg {
-  margin-left: 10px;
-  margin-top: 3px;
+  margin-top: 2px;
   transition: all 0.4s;
 }
 .luminix-default-btn.subcription-btn2,
@@ -6634,13 +6704,11 @@ textarea::placeholder { /* Most modern browsers support this now. */
   padding: 11px 44px;
   display: flex;
   justify-content: center;
-  background-color: var(--accent-bg);
 }
 .luminix-default-btn.subcription-btn2:hover,
 .luminix-subcribe-btn.subcription-btn2:hover,
 #luminix-submit-btn.subcription-btn2:hover {
-  color: var(--heading-color) !important;
-  background-color: var(--white-bg);
+  color: var(--white-color) !important;
 }
 .luminix-default-btn.faq-btn,
 .luminix-subcribe-btn.faq-btn,
@@ -6693,17 +6761,59 @@ textarea::placeholder { /* Most modern browsers support this now. */
 .luminix-subcribe-btn.luminix-header-btn,
 #luminix-submit-btn.luminix-header-btn {
   font-size: 16px;
-  padding: 15px 38px;
+  padding: 16px 37px;
   border-radius: 100px;
   color: var(--heading-color) !important;
-  background-color: var(--white-bg);
+  background-color: transparent;
   border: 2px solid var(--body-color);
 }
-.luminix-default-btn.luminix-header-btn img,
-.luminix-subcribe-btn.luminix-header-btn img,
-#luminix-submit-btn.luminix-header-btn img {
-  padding-top: 0;
-  margin-left: 10px;
+.luminix-default-btn.luminix-header-btn::before,
+.luminix-subcribe-btn.luminix-header-btn::before,
+#luminix-submit-btn.luminix-header-btn::before {
+  content: "";
+  position: absolute;
+  -webkit-transition-duration: 800ms;
+  transition-duration: 800ms;
+  width: 200%;
+  height: 200%;
+  top: 110%;
+  left: 50%;
+  background: var(--accent-color);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -o-border-radius: 50%;
+  -ms-border-radius: 50%;
+  border-radius: 50%;
+  border: 2px solid var(--accent-bg);
+  z-index: -1;
+}
+.luminix-default-btn.luminix-header-btn:hover,
+.luminix-subcribe-btn.luminix-header-btn:hover,
+#luminix-submit-btn.luminix-header-btn:hover {
+  color: var(--white-color) !important;
+  border: 2px solid transparent;
+}
+.luminix-default-btn.luminix-header-btn:hover::before, .luminix-default-btn.luminix-header-btn:hover .luminix-default-btn:focus-visible::before,
+.luminix-subcribe-btn.luminix-header-btn:hover::before,
+.luminix-subcribe-btn.luminix-header-btn:hover .luminix-default-btn:focus-visible::before,
+#luminix-submit-btn.luminix-header-btn:hover::before,
+#luminix-submit-btn.luminix-header-btn:hover .luminix-default-btn:focus-visible::before {
+  top: -40%;
+}
+.luminix-default-btn.luminix-header-btn:hover,
+.luminix-subcribe-btn.luminix-header-btn:hover,
+#luminix-submit-btn.luminix-header-btn:hover {
+  border: 2px solid var(--accent-color);
+}
+.luminix-default-btn.luminix-header-btn:hover path,
+.luminix-subcribe-btn.luminix-header-btn:hover path,
+#luminix-submit-btn.luminix-header-btn:hover path {
+  stroke: var(--white-bg);
 }
 @media (max-width: 767px) {
   .luminix-default-btn.luminix-header-btn,
@@ -6754,7 +6864,6 @@ textarea::placeholder { /* Most modern browsers support this now. */
 .luminix-default-btn.luminix-hero-btn2:hover,
 .luminix-subcribe-btn.luminix-hero-btn2:hover,
 #luminix-submit-btn.luminix-hero-btn2:hover {
-  color: var(--heading-color) !important;
   background-color: var(--white-bg);
 }
 .luminix-default-btn.luminix-hero-btn3,
@@ -6809,13 +6918,6 @@ textarea::placeholder { /* Most modern browsers support this now. */
   color: var(--white-color) !important;
   background-color: var(--heading-color);
 }
-.luminix-default-btn.disabled, .luminix-default-btn:disabled,
-.luminix-subcribe-btn.disabled,
-.luminix-subcribe-btn:disabled,
-#luminix-submit-btn.disabled,
-#luminix-submit-btn:disabled {
-  opacity: 1;
-}
 .luminix-default-btn.d-block,
 .luminix-subcribe-btn.d-block,
 #luminix-submit-btn.d-block {
@@ -6849,66 +6951,238 @@ textarea::placeholder { /* Most modern browsers support this now. */
   background-color: var(--heading-color);
 }
 
-.luminix-default-btn::before,
-#luminix-submit-btn::before {
-  position: absolute;
-  content: "";
-  border-radius: inherit;
-  -webkit-transition: all 0.4s ease;
-  transition: all 0.4s ease;
-  z-index: -1;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background-size: 102% 102%;
-  opacity: 0;
-}
-
-.luminix-default-btn .button-wraper,
-#luminix-submit-btn .button-wraper {
-  transition: opacity 0.2s, transform 0.2s;
-  transition-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
-}
-
-.luminix-default-btn:hover .button-wraper,
-#luminix-submit-btn:hover .button-wraper {
-  transform: translateY(-150%);
-  opacity: 0;
-}
-
-.luminix-default-btn:hover::before,
-#luminix-submit-btn:hover::before {
-  opacity: 1;
-  transition: all 0.2s cubic-bezier(0.455, 0.03, 0.515, 0.955);
-}
-
-.luminix-default-btn:hover::after,
-#luminix-submit-btn:hover::after {
-  transform: translate(0%, -50%);
-  opacity: 1;
-}
-
-.luminix-default-btn:after,
-#luminix-submit-btn:after {
-  content: attr(data-text);
-  display: inline-block;
-  position: absolute;
-  top: 50%;
-  opacity: 0;
-  line-height: 12.5px;
-  transform: translate(0, 100%);
-  transition: opacity 0.2s, transform 0.2s;
-  transition-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
-  white-space: nowrap;
-}
-
 @media (max-width: 991px) {
   .luminix-title-btn {
     width: 100%;
     text-align: center;
     margin-top: 30px;
   }
+}
+
+.luminix-default-btn svg {
+  transition: all 0.3s ease-out 0s;
+}
+
+.luminix-default-btn:hover svg path:nth-of-type(1), .luminix-default-btn:focus-visible svg path:nth-of-type(1) {
+  transform: translateX(calc(-1 * var(--arrow-hover-move-x)));
+  opacity: 0;
+  transition-delay: 0s, 0s;
+}
+
+.luminix-default-btn svg path:nth-of-type(1) {
+  transform: translateX(0);
+  opacity: 1;
+  transition-delay: 0.15s, 0.15s;
+}
+
+.luminix-default-btn svg path {
+  transition: transform 0.38s cubic-bezier(0.37, 0.08, 0.02, 0.93), opacity 0.18s ease-out;
+}
+
+.luminix-default-btn:hover svg path:nth-of-type(2), .luminix-default-btn:focus-visible svg path:nth-of-type(2) {
+  transform: translateX(0);
+  opacity: 1;
+  transition-delay: 0.15s, 0.15s;
+}
+
+.luminix-default-btn svg path:nth-of-type(2) {
+  transform: translateX(calc(1 * var(--arrow-hover-move-x)));
+  opacity: 0.5;
+  transition-delay: 0s, 0s;
+}
+
+.luminix-default-btn svg path:nth-of-type(1) {
+  transform: translateX(0);
+  opacity: 1;
+  transition-delay: 0.15s, 0.15s;
+}
+
+.luminix-default-btn svg path:nth-of-type(2) {
+  transform: translateX(calc(1 * var(--arrow-hover-move-x)));
+  opacity: 0.5;
+  transition-delay: 0s, 0s;
+}
+
+.luminix-list-icon-btn svg {
+  transition: all 0.3s ease-out 0s;
+}
+
+.luminix-list-icon-btn:hover svg path:nth-of-type(1), .luminix-list-icon-btn:focus-visible svg path:nth-of-type(1) {
+  transform: translateX(calc(-1 * var(--arrow-hover-move-x)));
+  opacity: 0;
+  transition-delay: 0s, 0s;
+}
+
+.luminix-list-icon-btn svg path:nth-of-type(1) {
+  transform: translateX(0);
+  opacity: 1;
+  transition-delay: 0.15s, 0.15s;
+}
+
+.luminix-list-icon-btn svg path {
+  transition: transform 0.38s cubic-bezier(0.37, 0.08, 0.02, 0.93), opacity 0.18s ease-out;
+}
+
+.luminix-list-icon-btn:hover svg path:nth-of-type(2), .luminix-list-icon-btn:focus-visible svg path:nth-of-type(2) {
+  transform: translateX(0);
+  opacity: 1;
+  transition-delay: 0.15s, 0.15s;
+}
+
+.luminix-list-icon-btn svg path:nth-of-type(2) {
+  transform: translateX(calc(1 * var(--arrow-hover-move-x)));
+  opacity: 0.5;
+  transition-delay: 0s, 0s;
+}
+
+.luminix-list-icon-btn svg path:nth-of-type(1) {
+  transform: translateX(0);
+  opacity: 1;
+  transition-delay: 0.15s, 0.15s;
+}
+
+.luminix-list-icon-btn svg path:nth-of-type(2) {
+  transform: translateX(calc(1 * var(--arrow-hover-move-x)));
+  opacity: 0.5;
+  transition-delay: 0s, 0s;
+}
+
+.luminix-list-icon-btn {
+  user-select: none;
+  -moz-user-select: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  text-align: center;
+  text-transform: capitalize;
+  touch-action: manipulation;
+  -webkit-transition: all 0.3s ease-out 0s;
+  -moz-transition: all 0.3s ease-out 0s;
+  -ms-transition: all 0.3s ease-out 0s;
+  -o-transition: all 0.3s ease-out 0s;
+  transition: all 0.3s ease-out 0s;
+  vertical-align: middle;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -o-border-radius: 0;
+  -ms-border-radius: 0;
+  white-space: nowrap;
+  --arrow-hover-move-x: -110%;
+}
+.luminix-list-icon-btn::before {
+  content: "";
+  position: absolute;
+  -webkit-transition-duration: 800ms;
+  transition-duration: 800ms;
+  width: 100%;
+  height: 100%;
+  top: 110%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -o-border-radius: 50%;
+  -ms-border-radius: 50%;
+  border-radius: 50%;
+  z-index: -1;
+}
+.luminix-list-icon-btn:hover::before, .luminix-list-icon-btn:hover .luminix-default-btn:focus-visible::before {
+  top: -40%;
+}
+
+.luminix-blog-btn {
+  user-select: none;
+  -moz-user-select: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  text-align: center;
+  text-transform: capitalize;
+  touch-action: manipulation;
+  -webkit-transition: all 0.3s ease-out 0s;
+  -moz-transition: all 0.3s ease-out 0s;
+  -ms-transition: all 0.3s ease-out 0s;
+  -o-transition: all 0.3s ease-out 0s;
+  transition: all 0.3s ease-out 0s;
+  vertical-align: middle;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -o-border-radius: 0;
+  -ms-border-radius: 0;
+  white-space: nowrap;
+  --arrow-hover-move-x: -110%;
+}
+.luminix-blog-btn::before {
+  content: "";
+  position: absolute;
+  -webkit-transition-duration: 800ms;
+  transition-duration: 800ms;
+  width: 100%;
+  height: 100%;
+  top: 110%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -o-border-radius: 50%;
+  -ms-border-radius: 50%;
+  border-radius: 50%;
+  z-index: -1;
+}
+.luminix-blog-btn:hover::before, .luminix-blog-btn:hover .luminix-default-btn:focus-visible::before {
+  top: -40%;
+}
+
+.luminix-blog-btn svg {
+  transition: all 0.3s ease-out 0s;
+}
+
+.luminix-blog-btn:hover svg path:nth-of-type(1), .luminix-blog-btn:focus-visible svg path:nth-of-type(1) {
+  transform: translateX(calc(-1 * var(--arrow-hover-move-x)));
+  opacity: 0;
+  transition-delay: 0s, 0s;
+}
+
+.luminix-blog-btn svg path:nth-of-type(1) {
+  transform: translateX(0);
+  opacity: 1;
+  transition-delay: 0.15s, 0.15s;
+}
+
+.luminix-blog-btn svg path {
+  transition: transform 0.38s cubic-bezier(0.37, 0.08, 0.02, 0.93), opacity 0.18s ease-out;
+}
+
+.luminix-blog-btn:hover svg path:nth-of-type(2), .luminix-blog-btn:focus-visible svg path:nth-of-type(2) {
+  transform: translateX(0);
+  opacity: 1;
+  transition-delay: 0.15s, 0.15s;
+}
+
+.luminix-blog-btn svg path:nth-of-type(2) {
+  transform: translateX(calc(1 * var(--arrow-hover-move-x)));
+  opacity: 0.5;
+  transition-delay: 0s, 0s;
+}
+
+.luminix-blog-btn svg path:nth-of-type(1) {
+  transform: translateX(0);
+  opacity: 1;
+  transition-delay: 0.15s, 0.15s;
+}
+
+.luminix-blog-btn svg path:nth-of-type(2) {
+  transform: translateX(calc(1 * var(--arrow-hover-move-x)));
+  opacity: 0.5;
+  transition-delay: 0s, 0s;
 }
 
 .breadcrumb-wrapper {
