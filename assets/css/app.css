@@ -2086,7 +2086,6 @@ a.luminix-header-info img {
   font-size: 24px;
   margin-bottom: 15px;
   line-height: 24px;
-  color: var(--accent-color2);
 }
 .luminix-contact-info h5 {
   margin-bottom: 5px;
@@ -2367,7 +2366,7 @@ a.luminix-header-info img {
   text-align: left;
   visibility: hidden;
   min-width: 220px;
-  border-radius: 6px;
+  border-radius: 0 0 6px 6px;
 }
 .main-menu ul.sub-menu li {
   padding: 5px 10px 5px 20px;
@@ -2378,7 +2377,6 @@ a.luminix-header-info img {
   display: inline-block;
   position: relative;
   font-weight: 400;
-  color: var(--accent-color2);
   text-transform: capitalize;
 }
 .main-menu ul.sub-menu li.menu-item-has-children a.no-border {
@@ -2406,7 +2404,7 @@ a.luminix-header-info img {
 .main-menu ul.sub-menu {
   padding: 12px 0;
   left: -27px;
-  top: 88px;
+  top: 86px;
 }
 .main-menu ul.sub-menu li {
   display: block;
@@ -2419,6 +2417,7 @@ a.luminix-header-info img {
   top: 0;
   margin: 0 0;
   margin-left: 20px;
+  border-radius: 0;
 }
 .main-menu ul.sub-menu li ul.sub-menu li ul {
   left: 100%;
@@ -2436,8 +2435,13 @@ ul.sub-menu li a::before {
   right: 0;
   height: 2px;
   width: 0;
-  background-color: #0a165e;
+  background-color: var(--heading-color) !important;
   transition: all 0.3s ease;
+}
+ul.sub-menu li a:hover::before {
+  left: 0;
+  right: auto;
+  width: 100%;
 }
 
 a.white-color {
@@ -2597,8 +2601,18 @@ a.white-color {
   transition: all 0.4s;
   color: var(--white-color);
 }
-.luminix-footer-menu ul li a:hover {
-  color: var(--accent-color);
+.luminix-footer-menu ul li a::before {
+  content: " ";
+  left: 0;
+  bottom: -3px;
+  width: 0;
+  height: 1px;
+  position: absolute;
+  transition: all 0.4s;
+  background: var(--white-color);
+}
+.luminix-footer-menu ul li a:hover::before {
+  width: 100%;
 }
 .luminix-footer-menu2 ul li {
   padding-bottom: 10px;
@@ -2822,7 +2836,7 @@ a.white-color {
 }
 
 .pl-26 {
-  padding-left: 26px;
+  padding-left: 30px;
 }
 @media (max-width: 1399px) {
   .pl-26 {
@@ -3157,6 +3171,11 @@ a.white-color {
   .mr-101 {
     margin-right: 0;
   }
+}
+
+.mt-24 {
+  margin-top: 24px;
+  padding: 13px 40px !important;
 }
 
 .luminix-list-icon-content ul li {
@@ -4094,15 +4113,12 @@ a.white-color {
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 5px;
+  border-radius: 5px !important;
   background-color: var(--accent-bg);
 }
-.luminix-p-btn img {
+.luminix-p-btn svg {
   transition: all 0.4s;
   transform: rotate(-45deg);
-}
-.luminix-p-btn:hover img {
-  transform: rotate(0);
 }
 .luminix-p-d-thumb {
   margin-bottom: 24px;
@@ -5695,9 +5711,8 @@ blockquote img {
   transition: all 0.4s;
   color: var(--heading-color);
 }
-.luminix-iconbox-btn a img {
-  padding-left: 10px;
-  padding-bottom: -5px;
+.luminix-iconbox-btn a svg {
+  margin-left: 5px;
 }
 
 .luminix-about-thumb {
@@ -6229,6 +6244,10 @@ button#header-search i {
   color: var(--white-color);
   background-color: rgba(255, 255, 255, 0.3019607843);
   width: 64%;
+  transition: all 0.4s;
+}
+.luminix-cta-input-field input:hover {
+  background-color: var(--heading-color);
 }
 @media (max-width: 767px) {
   .luminix-cta-input-field input {
@@ -6334,6 +6353,10 @@ textarea::placeholder { /* Most modern browsers support this now. */
 }
 .luminix-main-field.field2 input::placeholder {
   color: var(--heading-color);
+}
+.luminix-main-field svg {
+  margin-left: 10px;
+  margin-top: 0 !important;
 }
 
 .luminix-main-field input::-webkit-input-placeholder,
@@ -6647,7 +6670,7 @@ textarea::placeholder { /* Most modern browsers support this now. */
   border-radius: 0;
   white-space: nowrap;
   overflow: hidden;
-  border-radius: 100px;
+  border-radius: 50px;
   --arrow-hover-move-x: -110%;
   gap: 10px;
   z-index: 1;
@@ -6696,6 +6719,29 @@ textarea::placeholder { /* Most modern browsers support this now. */
   margin-top: 2px;
   transition: all 0.4s;
 }
+.luminix-default-btn.extra-btn,
+.luminix-subcribe-btn.extra-btn,
+#luminix-submit-btn.extra-btn {
+  border-radius: 3px;
+  padding: 18px 56px;
+}
+.luminix-default-btn.extra-btn2,
+.luminix-subcribe-btn.extra-btn2,
+#luminix-submit-btn.extra-btn2 {
+  border-radius: 3px;
+  padding: 18px 40px;
+}
+.luminix-default-btn.extra-btn3,
+.luminix-subcribe-btn.extra-btn3,
+#luminix-submit-btn.extra-btn3 {
+  border-radius: 3px;
+  padding: 18px 52px;
+}
+.luminix-default-btn.extra-btn4,
+.luminix-subcribe-btn.extra-btn4,
+#luminix-submit-btn.extra-btn4 {
+  padding: 18px 30px;
+}
 .luminix-default-btn.subcription-btn2,
 .luminix-subcribe-btn.subcription-btn2,
 #luminix-submit-btn.subcription-btn2 {
@@ -6710,6 +6756,11 @@ textarea::placeholder { /* Most modern browsers support this now. */
 #luminix-submit-btn.subcription-btn2:hover {
   color: var(--white-color) !important;
 }
+.luminix-default-btn.term-btn svg,
+.luminix-subcribe-btn.term-btn svg,
+#luminix-submit-btn.term-btn svg {
+  margin-left: 10px;
+}
 .luminix-default-btn.faq-btn,
 .luminix-subcribe-btn.faq-btn,
 #luminix-submit-btn.faq-btn {
@@ -6717,6 +6768,7 @@ textarea::placeholder { /* Most modern browsers support this now. */
   background-color: var(--white-bg);
   border: 1px solid rgba(0, 26, 61, 0.1019607843);
   margin-bottom: 15px;
+  padding: 17px 43px;
 }
 .luminix-default-btn.faq-btn:last-child,
 .luminix-subcribe-btn.faq-btn:last-child,
@@ -6826,7 +6878,7 @@ textarea::placeholder { /* Most modern browsers support this now. */
 .luminix-subcribe-btn.luminix-header-btn2,
 #luminix-submit-btn.luminix-header-btn2 {
   font-size: 16px;
-  padding: 17px 40px;
+  padding: 18px 40px;
   border-radius: 3px;
   color: var(--white-color) !important;
   background-color: var(--accent-bg);
@@ -6842,10 +6894,15 @@ textarea::placeholder { /* Most modern browsers support this now. */
 .luminix-subcribe-btn.luminix-header-btn3,
 #luminix-submit-btn.luminix-header-btn3 {
   font-size: 16px;
-  padding: 17px 40px;
-  border-radius: 3px;
+  padding: 18px 39px;
+  border-radius: 0;
   color: var(--heading-color) !important;
   background-color: var(--white-bg);
+}
+.luminix-default-btn.luminix-header-btn3:hover,
+.luminix-subcribe-btn.luminix-header-btn3:hover,
+#luminix-submit-btn.luminix-header-btn3:hover {
+  color: var(--white-color) !important;
 }
 @media (max-width: 767px) {
   .luminix-default-btn.luminix-header-btn3,
@@ -6885,12 +6942,12 @@ textarea::placeholder { /* Most modern browsers support this now. */
   border-radius: 6px;
   background: none;
   border: 2px solid #fff;
+  padding: 16px 38px;
 }
 .luminix-default-btn.cta-btn3:hover,
 .luminix-subcribe-btn.cta-btn3:hover,
 #luminix-submit-btn.cta-btn3:hover {
-  border: 2px solid transparent;
-  background-color: var(--accent-bg);
+  border: 2px solid var(--heading-color);
 }
 .luminix-default-btn.cta-btn2,
 .luminix-subcribe-btn.cta-btn2,
@@ -6898,6 +6955,7 @@ textarea::placeholder { /* Most modern browsers support this now. */
   background-color: var(--accent-bg);
   border: 2px solid var(--accent-bg);
   border-radius: 6px;
+  padding: 16px 40px;
 }
 .luminix-default-btn.cta-btn2:hover,
 .luminix-subcribe-btn.cta-btn2:hover,
@@ -6911,12 +6969,12 @@ textarea::placeholder { /* Most modern browsers support this now. */
   padding: 17px 22px;
   color: var(--heading-color) !important;
   background-color: var(--white-bg);
+  border-radius: 0;
 }
 .luminix-default-btn.cta-btn:hover,
 .luminix-subcribe-btn.cta-btn:hover,
 #luminix-submit-btn.cta-btn:hover {
   color: var(--white-color) !important;
-  background-color: var(--heading-color);
 }
 .luminix-default-btn.d-block,
 .luminix-subcribe-btn.d-block,
@@ -7003,7 +7061,7 @@ textarea::placeholder { /* Most modern browsers support this now. */
   transition-delay: 0s, 0s;
 }
 
-.luminix-list-icon-btn svg {
+.luminix-blog-btn, .luminix-list-icon-btn svg {
   transition: all 0.3s ease-out 0s;
 }
 
@@ -7183,6 +7241,192 @@ textarea::placeholder { /* Most modern browsers support this now. */
   transform: translateX(calc(1 * var(--arrow-hover-move-x)));
   opacity: 0.5;
   transition-delay: 0s, 0s;
+}
+
+.luminix-iconbox-btn {
+  user-select: none;
+  -moz-user-select: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  text-align: center;
+  text-transform: capitalize;
+  touch-action: manipulation;
+  -webkit-transition: all 0.3s ease-out 0s;
+  -moz-transition: all 0.3s ease-out 0s;
+  -ms-transition: all 0.3s ease-out 0s;
+  -o-transition: all 0.3s ease-out 0s;
+  transition: all 0.3s ease-out 0s;
+  vertical-align: middle;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -o-border-radius: 0;
+  -ms-border-radius: 0;
+  white-space: nowrap;
+  --arrow-hover-move-x: -110%;
+}
+.luminix-iconbox-btn::before {
+  content: "";
+  position: absolute;
+  -webkit-transition-duration: 800ms;
+  transition-duration: 800ms;
+  width: 100%;
+  height: 100%;
+  top: 110%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -o-border-radius: 50%;
+  -ms-border-radius: 50%;
+  border-radius: 50%;
+  z-index: -1;
+}
+.luminix-iconbox-btn:hover::before, .luminix-iconbox-btn:hover .luminix-default-btn:focus-visible::before {
+  top: -40%;
+}
+
+.luminix-iconbox-btn svg {
+  transition: all 0.3s ease-out 0s;
+}
+
+.luminix-iconbox-btn:hover svg path:nth-of-type(1), .luminix-iconbox-btn:focus-visible svg path:nth-of-type(1) {
+  transform: translateX(calc(-1 * var(--arrow-hover-move-x)));
+  opacity: 0;
+  transition-delay: 0s, 0s;
+}
+
+.luminix-iconbox-btn svg path:nth-of-type(1) {
+  transform: translateX(0);
+  opacity: 1;
+  transition-delay: 0.15s, 0.15s;
+}
+
+.luminix-iconbox-btn svg path {
+  transition: transform 0.38s cubic-bezier(0.37, 0.08, 0.02, 0.93), opacity 0.18s ease-out;
+}
+
+.luminix-iconbox-btn:hover svg path:nth-of-type(2), .luminix-iconbox-btn:focus-visible svg path:nth-of-type(2) {
+  transform: translateX(0);
+  opacity: 1;
+  transition-delay: 0.15s, 0.15s;
+}
+
+.luminix-iconbox-btn svg path:nth-of-type(2) {
+  transform: translateX(calc(1 * var(--arrow-hover-move-x)));
+  opacity: 0.5;
+  transition-delay: 0s, 0s;
+}
+
+.luminix-iconbox-btn svg path:nth-of-type(1) {
+  transform: translateX(0);
+  opacity: 1;
+  transition-delay: 0.15s, 0.15s;
+}
+
+.luminix-iconbox-btn svg path:nth-of-type(2) {
+  transform: translateX(calc(1 * var(--arrow-hover-move-x)));
+  opacity: 0.5;
+  transition-delay: 0s, 0s;
+}
+
+.luminix-p-btn {
+  user-select: none;
+  -moz-user-select: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  text-align: center;
+  text-transform: capitalize;
+  touch-action: manipulation;
+  -webkit-transition: all 0.3s ease-out 0s;
+  -moz-transition: all 0.3s ease-out 0s;
+  -ms-transition: all 0.3s ease-out 0s;
+  -o-transition: all 0.3s ease-out 0s;
+  transition: all 0.3s ease-out 0s;
+  vertical-align: middle;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -o-border-radius: 0;
+  -ms-border-radius: 0;
+  white-space: nowrap;
+  --arrow-hover-move-x: -110%;
+}
+.luminix-p-btn::before {
+  content: "";
+  position: absolute;
+  -webkit-transition-duration: 800ms;
+  transition-duration: 800ms;
+  width: 100%;
+  height: 100%;
+  top: 110%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -o-border-radius: 50%;
+  -ms-border-radius: 50%;
+  border-radius: 50%;
+  z-index: -1;
+}
+.luminix-p-btn:hover::before, .luminix-p-btn:hover .luminix-default-btn:focus-visible::before {
+  top: -40%;
+}
+
+.luminix-p-btn svg {
+  transition: all 0.3s ease-out 0s;
+}
+
+.luminix-p-btn:hover svg path:nth-of-type(1), .luminix-p-btn:focus-visible svg path:nth-of-type(1) {
+  transform: translateX(calc(-1 * var(--arrow-hover-move-x)));
+  opacity: 0;
+  transition-delay: 0s, 0s;
+}
+
+.luminix-p-btn svg path:nth-of-type(1) {
+  transform: translateX(0);
+  opacity: 1;
+  transition-delay: 0.15s, 0.15s;
+}
+
+.luminix-p-btn svg path {
+  transition: transform 0.38s cubic-bezier(0.37, 0.08, 0.02, 0.93), opacity 0.18s ease-out;
+}
+
+.luminix-p-btn:hover svg path:nth-of-type(2), .luminix-p-btn:focus-visible svg path:nth-of-type(2) {
+  transform: translateX(0);
+  opacity: 1;
+  transition-delay: 0.15s, 0.15s;
+}
+
+.luminix-p-btn svg path:nth-of-type(2) {
+  transform: translateX(calc(1 * var(--arrow-hover-move-x)));
+  opacity: 0.5;
+  transition-delay: 0s, 0s;
+}
+
+.luminix-p-btn svg path:nth-of-type(1) {
+  transform: translateX(0);
+  opacity: 1;
+  transition-delay: 0.15s, 0.15s;
+}
+
+.luminix-p-btn svg path:nth-of-type(2) {
+  transform: translateX(calc(1 * var(--arrow-hover-move-x)));
+  opacity: 0.5;
+  transition-delay: 0s, 0s;
+}
+
+.extra-padding2 {
+  padding: 13px 40px;
 }
 
 .breadcrumb-wrapper {
