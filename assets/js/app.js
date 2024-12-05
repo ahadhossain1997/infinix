@@ -627,4 +627,38 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
     };
     google.maps.event.addDomListener(window, 'load', init);
   }
+
+  // hero slider animation
+
+  $('.hero').slick({
+    autoplay: true,
+    speed: 800,
+    lazyLoad: 'progressive',
+    arrows: false,
+    dots: false
+  }).slickAnimation();
+
+  //  text animation
+
+  Splitting();
+  gsap.from(".char", {
+    duration: 0.5,
+    opacity: 0,
+    stagger: 0.02,
+    y: 30,
+    ease: "power1.inOut"
+  });
+
+  // magic hover
+
+  var $items = $(".luminix-career-wrap");
+  if ($items.length) {
+    $items.on("mouseover", function () {
+      // Remove 'hovered' class from all items
+      $items.removeClass("hovered");
+
+      // Add 'hovered' class to the current item
+      $(this).addClass("hovered");
+    });
+  }
 })(jQuery);
