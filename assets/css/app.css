@@ -2859,12 +2859,12 @@ a.white-color {
   }
 }
 
-.pl-26 {
-  padding-left: 30px;
+.pr-50 {
+  padding-right: 50px;
 }
 @media (max-width: 1399px) {
-  .pl-26 {
-    padding-left: 0;
+  .pr-50 {
+    padding-right: 0;
   }
 }
 
@@ -3081,9 +3081,6 @@ a.white-color {
     box-shadow: 0px 4px 80px 0px rgba(0, 0, 0, 0.0784313725);
     margin-bottom: 24px;
   }
-}
-.luminix-career-wrap:hover {
-  box-shadow: 0px 4px 80px 0px rgba(0, 0, 0, 0.0784313725);
 }
 .luminix-career-wrap h5 {
   margin-bottom: 15px;
@@ -4251,6 +4248,8 @@ a.white-color {
   border-radius: 10px;
   padding: 30px;
   background-color: var(--light-color);
+  position: sticky;
+  top: 120px;
 }
 @media (max-width: 991px) {
   .luminix-p-d-sidebar {
@@ -4404,6 +4403,60 @@ img.plasicon {
   flex-shrink: 0;
 }
 
+/* Start Nav Styles */
+.scroll-btn {
+  position: sticky;
+  z-index: 999;
+  top: 200px;
+  transition: all 0.4s;
+}
+.scroll-btn ul li {
+  margin-bottom: 15px;
+}
+.scroll-btn ul li:last-child {
+  margin-bottom: 0;
+}
+.scroll-btn ul li a.active {
+  color: var(--white-color) !important;
+  background-color: var(--accent-bg);
+}
+.scroll-btn ul li a.active path {
+  stroke: #fff;
+  fill: #fff;
+}
+
+.scroll-btn .nav-menu li .luminix-default-btn::after {
+  display: block;
+  position: absolute;
+  content: "";
+  border-radius: 50px;
+  top: 50%;
+  transition: all 0.4s;
+}
+
+.scroll-btn .nav-menu li .luminix-default-btn::after {
+  width: 250px;
+  height: 60px;
+  border: 1px solid transparent;
+  transform: translateY(-50%) scale(0);
+  background-color: var(--accent-bg);
+  color: var(--white-color);
+  z-index: -1;
+  transition: all 0.4s;
+}
+
+.scroll-btn .nav-menu li .luminix-default-btn.active::after,
+.scroll-btn .nav-menu li:hover .luminix-default-btn::after {
+  transition: all 0.4s;
+}
+
+.scroll-btn .nav-menu li .luminix-default-btn.active span,
+.scroll-btn .nav-menu li:hover .luminix-default-btn span {
+  opacity: 1;
+  transition: all 0.4s;
+}
+
+/* End Nav Styles */
 .luminix-pricing-wrap {
   padding: 30px;
   border-radius: 10px;
@@ -6894,16 +6947,11 @@ textarea::placeholder { /* Most modern browsers support this now. */
     margin: 0 auto 15px;
   }
 }
-.luminix-default-btn.faq-btn:last-child,
-.luminix-subcribe-btn.faq-btn:last-child,
-#luminix-submit-btn.faq-btn:last-child {
-  margin-bottom: 0;
-}
 .luminix-default-btn.faq-btn:hover,
 .luminix-subcribe-btn.faq-btn:hover,
 #luminix-submit-btn.faq-btn:hover {
   color: var(--white-color) !important;
-  background-color: var(--accent-bg);
+  background-color: var(--white-bg);
   border: 1px solid transparent;
 }
 .luminix-default-btn.faq-btn:hover svg path,
