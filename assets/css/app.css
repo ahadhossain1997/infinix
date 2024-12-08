@@ -4343,11 +4343,6 @@ a.white-color {
   border-bottom: 1px solid rgba(0, 26, 61, 0.1019607843);
   margin-bottom: 30px;
 }
-.luminix-faq-item:last-child {
-  padding-bottom: 0;
-  border-bottom: none;
-  margin-bottom: 0;
-}
 .luminix-faq-item.open .luminix-faq-body {
   display: block;
 }
@@ -4370,6 +4365,12 @@ a.white-color {
 .luminix-faq-item.open img.mynusicon {
   opacity: 0;
   display: block;
+}
+
+.border-b {
+  padding-bottom: 0;
+  border-bottom: none;
+  margin-bottom: 0;
 }
 
 img.mynusicon {
@@ -5289,11 +5290,11 @@ img.plasicon {
   }
 }
 
-.mr-80 {
-  margin-right: 80px;
+.mr-30 {
+  margin-right: 30px;
 }
 @media (max-width: 991px) {
-  .mr-80 {
+  .mr-30 {
     margin-right: 0;
   }
 }
@@ -5422,6 +5423,10 @@ blockquote img {
   position: absolute;
   bottom: -50px;
   right: 100px;
+  overflow: hidden;
+  transform: translatey(0);
+  -webkit-animation: updown 3s ease-in-out infinite;
+  animation: updown 3s ease-in-out infinite;
 }
 @media (max-width: 1399px) {
   .luminix-service-card {
@@ -5899,6 +5904,10 @@ blockquote img {
   position: absolute;
   bottom: -40px;
   right: 100px;
+  overflow: hidden;
+  transform: translatey(0);
+  -webkit-animation: updown 3s ease-in-out infinite;
+  animation: updown 3s ease-in-out infinite;
 }
 .luminix-about-card h2, .luminix-about-card h5 {
   color: var(--white-color);
@@ -5997,6 +6006,10 @@ blockquote img {
   padding: 14px 20px;
   border-radius: 10px;
   width: 280px;
+  overflow: hidden;
+  transform: translatey(0);
+  -webkit-animation: updown 3s ease-in-out infinite;
+  animation: updown 3s ease-in-out infinite;
 }
 @media (max-width: 1399px) {
   .luminix-about-card2 {
@@ -6035,6 +6048,14 @@ blockquote img {
   bottom: 24px;
   left: 24px;
   background-color: var(--accent-color);
+  overflow: hidden;
+  transform: translatey(0);
+  -webkit-animation: updown 3s ease-in-out infinite;
+  animation: updown 3s ease-in-out infinite;
+}
+.luminix-about-card3.card4 {
+  width: 460px;
+  left: 20px;
 }
 .luminix-about-card3 img {
   padding-bottom: 5px;
@@ -6238,6 +6259,17 @@ blockquote img {
   }
 }
 
+@keyframes updown {
+  0% {
+    transform: translatey(0px);
+  }
+  50% {
+    transform: translatey(-30px);
+  }
+  100% {
+    transform: translatey(0px);
+  }
+}
 input[type=text],
 input[type=email],
 input[type=password],
