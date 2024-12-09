@@ -2958,11 +2958,11 @@ a.white-color {
 
 .luminix-term-condition-content {
   padding-bottom: 30px;
-  padding-left: 100px;
+  padding-left: 50px;
 }
 @media (max-width: 1199px) {
   .luminix-term-condition-content {
-    padding-left: 80px;
+    padding-left: 30px;
   }
 }
 @media (max-width: 991px) {
@@ -3200,20 +3200,6 @@ a.white-color {
 .luminix-career-single-sidebar ul li img {
   padding-right: 10px;
   padding-bottom: 3px;
-}
-
-.mr-101 {
-  margin-right: 100px;
-}
-@media (max-width: 1199px) {
-  .mr-101 {
-    margin-right: 70px;
-  }
-}
-@media (max-width: 991px) {
-  .mr-101 {
-    margin-right: 0;
-  }
 }
 
 .mt-24 {
@@ -4617,16 +4603,16 @@ img.plasicon {
   line-height: 30px;
 }
 
-.pl-120 {
-  padding-left: 120px;
+.pl-103 {
+  padding-left: 100px;
 }
 @media (max-width: 1199px) {
-  .pl-120 {
-    padding-left: 80px;
+  .pl-103 {
+    padding-left: 50px;
   }
 }
 @media (max-width: 991px) {
-  .pl-120 {
+  .pl-103 {
     padding-left: 0px;
   }
 }
@@ -5486,7 +5472,7 @@ blockquote img {
   stroke: var(--accent-color);
 }
 .luminix-service-d-wrap {
-  padding-right: 120px;
+  padding-right: 30px;
 }
 @media (max-width: 991px) {
   .luminix-service-d-wrap {
